@@ -27,11 +27,22 @@ const Header = () => {
 };
 
 const MainHeader = styled.div`
-  padding: 0 32px;
+  padding: 26px 32px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  position: relative;
 `;
 
-const Nav = styled.nav``;
+const Nav = styled.nav`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  gap: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 const NavLink = styled.a`
   font-size: 1.125rem;
@@ -39,6 +50,7 @@ const NavLink = styled.a`
   text-decoration: none;
   color: ${COLORS.gray[900]};
   font-weight: ${WEIGHTS.medium};
+  padding: 12px;
 
   &:first-of-type {
     color: ${COLORS.secondary};
